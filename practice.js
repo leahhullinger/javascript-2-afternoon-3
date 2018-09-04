@@ -28,6 +28,9 @@
 */
 
 // Code Here 
+var first = function(arr,cb){
+  cb(arr[0])
+}
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -48,6 +51,9 @@ first(names, function(firstName){
 */
 
 //Code Here
+var last = function(arr, cb){
+  cb(arr[arr.length -1])
+}
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -66,7 +72,9 @@ last(names, function(lastName){
 */
 
 //Code Here
-
+var multiply = function(num1,num2,cb){
+  cb(num1 * num2)
+}
 // Do not edit the code below.
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
@@ -85,6 +93,16 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
+var contains = function(arr,name,cb){
+  arr.map((name) => {
+    if(name){
+      cb(true)
+    } 
+    else if(!name){
+      cb(false)
+      }
+  })  
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -106,7 +124,31 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+var uniq = function(arr,cb){
+  cb() = []
 
+  for(var i = 0; i<= arr.length;i++){
+    if(removeDuplicates[arr[i]] === undefined){
+      removeDuplicates[arr[i]] = 1;
+      } else {
+          return true;
+    }
+    return false;
+    
+  }
+  /*var method2 = function(a) {
+    var counts = [];
+    for(var i = 0; i <= a.length; i++) {
+        if(counts[a[i]] === undefined) {
+            counts[a[i]] = 1;
+        } else {
+            return true;
+        }
+    }
+    return false;
+}
+*/
+}
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
